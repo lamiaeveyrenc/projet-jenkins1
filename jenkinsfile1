@@ -3,7 +3,7 @@
 node{
 agent any
 stages {
-        stage("clone") {
+        stage("Clone") {
             steps {
                 git 'https://github.com/lamiaeveyrenc/projet-jenkins1.git'
             }
@@ -14,3 +14,10 @@ stages {
                 sh label: '', script: 'javac Main.java'
             }
         }
+        stage("Run") {
+            steps {
+                sh label: '', script: 'java Main'
+            }
+        }
+}
+}
